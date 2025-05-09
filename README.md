@@ -1,2 +1,2 @@
-# trade-republic-mcp
-A MCP for Trade Republic
+# Trade Republic MCP
+A Model Context Protocol Server for Trade Republic.
