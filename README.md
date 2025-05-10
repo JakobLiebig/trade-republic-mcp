@@ -5,7 +5,7 @@ Setup
 ```
 git clone ... trade-republic-mcp
 cd trade-republic-mcp
-uv pip install --all
+uv sync
 ```
 
 Create .env and add these variables:
