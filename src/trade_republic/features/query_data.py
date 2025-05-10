@@ -25,7 +25,7 @@ def load_banking_data() -> pd.DataFrame:
     if _banking_df is not None:
         return _banking_df
     
-    file_path = os.path.join('data', 'banking_sample_data.csv')
+    file_path = os.path.join('data', 'banking_simple.csv')
     _banking_df = pd.read_csv(file_path)
     
     # Convert columns to appropriate data types
@@ -34,7 +34,7 @@ def load_banking_data() -> pd.DataFrame:
     
     # Ensure mcc is properly handled (it can be NaN)
     _banking_df['mcc'] = _banking_df['mcc'].astype('Int64', errors='ignore')
-    
+
     return _banking_df
 
 
@@ -50,7 +50,7 @@ def load_trading_data() -> pd.DataFrame:
     if _trading_df is not None:
         return _trading_df
     
-    file_path = os.path.join('data', 'trading_sample_data.csv')
+    file_path = os.path.join('data', 'trading_simple.csv')
     _trading_df = pd.read_csv(file_path)
     
     # Convert columns to appropriate data types
@@ -65,25 +65,24 @@ def load_trading_data() -> pd.DataFrame:
     return _trading_df
 
 
-@mcp.resource("banking://data")
+@mcp.tool()
 def get_all_banking_data() -> str:
     """Get all banking data"""
     df = load_banking_data()
     # Convert to dict and then serialize to JSON
-    return json.dumps(df.to_dict(orient='records'))
+    return df.to_dict(orient='records')
 
 
-@mcp.resource("trading://data")
+@mcp.tool()
 def get_all_trading_data() -> str:
     """Get all trading data"""
     df = load_trading_data()
     # Convert to dict and then serialize to JSON
-    return json.dumps(df.to_dict(orient='records'))
+    return df.to_dict(orient='records')
 
 
 @mcp.tool()
 def get_banking_data(
-    user_id: Optional[str] = DEFAULT_USER_ID,
     start_date: Optional[str] = None,
     end_date: Optional[str] = None,
     side: Optional[str] = None,
@@ -97,7 +96,6 @@ def get_banking_data(
     Query banking data with optional filters.
     
     Args:
-        user_id: Filter by specific user ID
         start_date: Filter transactions on or after this date (YYYY-MM-DD)
         end_date: Filter transactions on or before this date (YYYY-MM-DD)
         side: Filter by transaction side (CREDIT/DEBIT)
@@ -116,9 +114,6 @@ def get_banking_data(
         end_date = pd.to_datetime(end_date).date()
     
     # Apply filters
-    if user_id:
-        df = df[df['userId'] == user_id]
-    
     if start_date:
         df = df[df['bookingDate'] >= start_date]
         
@@ -155,7 +150,6 @@ def get_banking_data(
 
 @mcp.tool()
 def get_trading_data(
-    user_id: Optional[str] = DEFAULT_USER_ID,
     start_datetime: Optional[str] = None,
     end_datetime: Optional[str] = None,
     isin: Optional[Union[str, List[str]]] = None,
@@ -173,7 +167,6 @@ def get_trading_data(
     Query trading data with optional filters.
     
     Args:
-        user_id: Filter by specific user ID
         start_datetime: Filter transactions on or after this datetime
         end_datetime: Filter transactions on or before this datetime
         isin: Filter by ISIN(s)
@@ -194,10 +187,6 @@ def get_trading_data(
         start_datetime = pd.to_datetime(start_datetime)
     if isinstance(end_datetime, str):
         end_datetime = pd.to_datetime(end_datetime)
-    
-    # Apply filters
-    if user_id:
-        df = df[df['userId'] == user_id]
     
     if start_datetime:
         df = df[df['executedAt'] >= start_datetime]
@@ -245,9 +234,8 @@ def get_trading_data(
     return df.to_dict(orient='records')
 
 
-@mcp.resource("user://{user_id}/activity")
+@mcp.tool()
 def get_user_activity(
-    user_id: str = DEFAULT_USER_ID,
     start_date: Optional[str] = None,
     end_date: Optional[str] = None
 ) -> str:
@@ -255,13 +243,11 @@ def get_user_activity(
     Get combined banking and trading activity for a specific user.
     
     Args:
-        user_id: User ID to query (default: "00909ba7-ad01-42f1-9074-2773c7d3cf2c")
         start_date: Filter transactions on or after this date
         end_date: Filter transactions on or before this date
     """
     # Get banking data
     banking_data = get_banking_data(
-        user_id=user_id,
         start_date=start_date,
         end_date=end_date
     )
@@ -276,7 +262,6 @@ def get_user_activity(
     
     # Get trading data
     trading_data = get_trading_data(
-        user_id=user_id,
         start_datetime=start_datetime,
         end_datetime=end_datetime
     )
@@ -289,9 +274,8 @@ def get_user_activity(
     return json.dumps(result)
 
 
-@mcp.resource("user://{user_id}/balance")
+@mcp.tool()
 def calculate_account_balance(
-    user_id: str = DEFAULT_USER_ID,
     start_date: Optional[str] = None,
     end_date: Optional[str] = None
 ) -> str:
@@ -299,12 +283,10 @@ def calculate_account_balance(
     Calculate account balance over time for a specific user.
     
     Args:
-        user_id: User ID to calculate balance for
         start_date: Start date for calculation (YYYY-MM-DD)
         end_date: End date for calculation (YYYY-MM-DD)
     """
     banking_data = get_banking_data(
-        user_id=user_id,
         start_date=start_date,
         end_date=end_date
     )
@@ -342,7 +324,6 @@ def calculate_account_balance(
 
 @mcp.tool()
 def get_largest_transactions(
-    user_id: Optional[str] = DEFAULT_USER_ID,
     transaction_type: Optional[str] = None,
     start_date: Optional[str] = None,
     end_date: Optional[str] = None,
@@ -352,14 +333,12 @@ def get_largest_transactions(
     Get the n largest banking transactions.
     
     Args:
-        user_id: Optional user ID filter
         transaction_type: Optional transaction type filter
         start_date: Optional start date filter (YYYY-MM-DD)
         end_date: Optional end date filter (YYYY-MM-DD)
         n: Number of transactions to return (default 10)
     """
     banking_data = get_banking_data(
-        user_id=user_id,
         transaction_type=transaction_type,
         start_date=start_date,
         end_date=end_date
@@ -380,7 +359,6 @@ def get_largest_transactions(
 
 @mcp.tool()
 def summarize_trading_by_isin(
-    user_id: Optional[str] = DEFAULT_USER_ID,
     start_date: Optional[str] = None,
     end_date: Optional[str] = None
 ) -> Dict:
@@ -388,7 +366,6 @@ def summarize_trading_by_isin(
     Summarize trading activity by security (ISIN).
     
     Args:
-        user_id: Optional user ID filter
         start_date: Optional start date filter (YYYY-MM-DD)
         end_date: Optional end date filter (YYYY-MM-DD)
     """
@@ -401,7 +378,6 @@ def summarize_trading_by_isin(
         end_datetime = end_date_obj.replace(hour=23, minute=59, second=59).isoformat()
     
     trading_data = get_trading_data(
-        user_id=user_id,
         start_datetime=start_datetime,
         end_datetime=end_datetime
     )
@@ -445,7 +421,6 @@ def summarize_trading_by_isin(
 
 @mcp.tool()
 def group_transactions_by_type(
-    user_id: Optional[str] = DEFAULT_USER_ID,
     start_date: Optional[str] = None,
     end_date: Optional[str] = None
 ) -> Dict:
@@ -453,12 +428,10 @@ def group_transactions_by_type(
     Group banking transactions by type and calculate summary statistics.
     
     Args:
-        user_id: Optional user ID filter
         start_date: Optional start date filter (YYYY-MM-DD)
         end_date: Optional end date filter (YYYY-MM-DD)
     """
     banking_data = get_banking_data(
-        user_id=user_id,
         start_date=start_date,
         end_date=end_date
     )
@@ -499,7 +472,6 @@ def group_transactions_by_type(
 
 @mcp.tool()
 def get_monthly_summary(
-    user_id: Optional[str] = DEFAULT_USER_ID,
     start_date: Optional[str] = None,
     end_date: Optional[str] = None
 ) -> Dict:
@@ -507,12 +479,10 @@ def get_monthly_summary(
     Get monthly summary of banking transactions.
     
     Args:
-        user_id: Optional user ID filter
         start_date: Optional start date filter (YYYY-MM-DD)
         end_date: Optional end date filter (YYYY-MM-DD)
     """
     banking_data = get_banking_data(
-        user_id=user_id,
         start_date=start_date,
         end_date=end_date
     )

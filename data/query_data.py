@@ -199,9 +199,9 @@ def get_trading_data(
         
     if isin:
         if isinstance(isin, list):
-            df = df[df['ISIN'].isin(isin)]
+            df = df[df['isin'].isin(isin)]
         else:
-            df = df[df['ISIN'] == isin]
+            df = df[df['isin'] == isin]
         
     if direction:
         df = df[df['direction'] == direction]

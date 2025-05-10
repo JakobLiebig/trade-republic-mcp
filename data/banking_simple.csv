@@ -1,0 +1,105 @@
+bookingDate,side,amount,currency,type,mcc,edited_description,combined_description,usda_description,irs_description,irs_reportable
+2024-04-01,CREDIT,1.85,EUR,INTEREST,,,,,,
+2024-04-05,CREDIT,4950.5,EUR,PAYIN,,,,,,
+2024-04-08,DEBIT,5271.63,EUR,TRADING,,,,,,
+2024-04-10,DEBIT,2.96,EUR,CARD,5411.0,"Grocery Stores, Supermarkets","Grocery Stores, Supermarkets",Grocery Stores,"Grocery Stores, Supermarkets",No1.6041-3(c)
+2024-04-12,DEBIT,25.26,EUR,CARD,5411.0,"Grocery Stores, Supermarkets","Grocery Stores, Supermarkets",Grocery Stores,"Grocery Stores, Supermarkets",No1.6041-3(c)
+2024-04-13,DEBIT,14.88,EUR,CARD,7542.0,Car Washes,Car Washes,Car Washes,Car Washes,Yes
+2024-04-13,DEBIT,22.41,EUR,CARD,5411.0,"Grocery Stores, Supermarkets","Grocery Stores, Supermarkets",Grocery Stores,"Grocery Stores, Supermarkets",No1.6041-3(c)
+2024-04-17,DEBIT,19.27,EUR,CARD,5411.0,"Grocery Stores, Supermarkets","Grocery Stores, Supermarkets",Grocery Stores,"Grocery Stores, Supermarkets",No1.6041-3(c)
+2024-04-17,DEBIT,6.49,EUR,CARD,5411.0,"Grocery Stores, Supermarkets","Grocery Stores, Supermarkets",Grocery Stores,"Grocery Stores, Supermarkets",No1.6041-3(c)
+2024-04-18,CREDIT,498.35,EUR,PAYIN,,,,,,
+2024-04-19,DEBIT,11.09,EUR,CARD,5912.0,Drug Stores and Pharmacies,Drug Stores and Pharmacies,Drug Stores and Pharmacies,Drug Stores and Pharmacies,No1.6041-3(c)
+2024-04-20,DEBIT,55.69,EUR,CARD,5411.0,"Grocery Stores, Supermarkets","Grocery Stores, Supermarkets",Grocery Stores,"Grocery Stores, Supermarkets",No1.6041-3(c)
+2024-04-23,DEBIT,989.52,EUR,CARD,5511.0,"Car and Truck Dealers (New and Used) Sales, Service, Repairs, Parts, and Leasing","Car and Truck Dealers (New and Used) Sales, Service, Repairs, Parts, and Leasing","Car and Truck Dealers (New and Used) Sales, Service, Repairs, Parts, and Leasing","Car and Truck Dealers (New & Used) Sales, Service, Repairs Parts and Leasing ",No1.6041-3(c)
+2024-04-24,CREDIT,2015.8,EUR,PAYIN,,,,,,
+2024-04-24,DEBIT,20.38,EUR,CARD,5411.0,"Grocery Stores, Supermarkets","Grocery Stores, Supermarkets",Grocery Stores,"Grocery Stores, Supermarkets",No1.6041-3(c)
+2024-04-26,DEBIT,1556.48,EUR,TRADING,,,,,,
+2024-04-26,DEBIT,4.65,EUR,CARD,5411.0,"Grocery Stores, Supermarkets","Grocery Stores, Supermarkets",Grocery Stores,"Grocery Stores, Supermarkets",No1.6041-3(c)
+2024-04-27,DEBIT,18.28,EUR,CARD,5411.0,"Grocery Stores, Supermarkets","Grocery Stores, Supermarkets",Grocery Stores,"Grocery Stores, Supermarkets",No1.6041-3(c)
+2024-04-30,DEBIT,24.39,EUR,CARD,5411.0,"Grocery Stores, Supermarkets","Grocery Stores, Supermarkets",Grocery Stores,"Grocery Stores, Supermarkets",No1.6041-3(c)
+2024-05-01,CREDIT,1.48,EUR,INTEREST,,,,,,
+2024-05-03,DEBIT,0.04,EUR,CARD,5411.0,"Grocery Stores, Supermarkets","Grocery Stores, Supermarkets",Grocery Stores,"Grocery Stores, Supermarkets",No1.6041-3(c)
+2024-05-03,DEBIT,13.92,EUR,CARD,5411.0,"Grocery Stores, Supermarkets","Grocery Stores, Supermarkets",Grocery Stores,"Grocery Stores, Supermarkets",No1.6041-3(c)
+2024-05-04,DEBIT,4.17,EUR,CARD,5541.0,Service Stations ( with or without ancillary services),Service Stations ( with or without ancillary services),Service Stations ( with or without ancillary services),Service Stations ,No1.6041-3(c)
+2024-05-04,DEBIT,20.86,EUR,CARD,5411.0,"Grocery Stores, Supermarkets","Grocery Stores, Supermarkets",Grocery Stores,"Grocery Stores, Supermarkets",No1.6041-3(c)
+2024-05-07,DEBIT,9.74,EUR,CARD,5411.0,"Grocery Stores, Supermarkets","Grocery Stores, Supermarkets",Grocery Stores,"Grocery Stores, Supermarkets",No1.6041-3(c)
+2024-05-07,DEBIT,29.87,EUR,CARD,5411.0,"Grocery Stores, Supermarkets","Grocery Stores, Supermarkets",Grocery Stores,"Grocery Stores, Supermarkets",No1.6041-3(c)
+2024-05-08,DEBIT,54.35,EUR,CARD,5411.0,"Grocery Stores, Supermarkets","Grocery Stores, Supermarkets",Grocery Stores,"Grocery Stores, Supermarkets",No1.6041-3(c)
+2024-05-10,DEBIT,15.89,EUR,CARD,5411.0,"Grocery Stores, Supermarkets","Grocery Stores, Supermarkets",Grocery Stores,"Grocery Stores, Supermarkets",No1.6041-3(c)
+2024-05-10,DEBIT,20.93,EUR,CARD,5912.0,Drug Stores and Pharmacies,Drug Stores and Pharmacies,Drug Stores and Pharmacies,Drug Stores and Pharmacies,No1.6041-3(c)
+2024-05-10,DEBIT,3.01,EUR,CARD,5411.0,"Grocery Stores, Supermarkets","Grocery Stores, Supermarkets",Grocery Stores,"Grocery Stores, Supermarkets",No1.6041-3(c)
+2024-05-10,DEBIT,18.71,EUR,CARD,5411.0,"Grocery Stores, Supermarkets","Grocery Stores, Supermarkets",Grocery Stores,"Grocery Stores, Supermarkets",No1.6041-3(c)
+2024-05-11,DEBIT,38.85,EUR,CARD,5411.0,"Grocery Stores, Supermarkets","Grocery Stores, Supermarkets",Grocery Stores,"Grocery Stores, Supermarkets",No1.6041-3(c)
+2024-05-12,DEBIT,5.58,EUR,CARD,7991.0,Tourist Attractions and Exhibits,Tourist Attractions and Exhibits,Tourist Attractions and Exhibits,Tourist Attractions and Exhibits,Yes
+2024-05-13,CREDIT,1470.3,EUR,PAYIN,,,,,,
+2024-05-14,DEBIT,82.67,EUR,CARD,5541.0,Service Stations ( with or without ancillary services),Service Stations ( with or without ancillary services),Service Stations ( with or without ancillary services),Service Stations ,No1.6041-3(c)
+2024-05-16,DEBIT,33.38,EUR,CARD,5411.0,"Grocery Stores, Supermarkets","Grocery Stores, Supermarkets",Grocery Stores,"Grocery Stores, Supermarkets",No1.6041-3(c)
+2024-05-17,DEBIT,12.35,EUR,CARD,5411.0,"Grocery Stores, Supermarkets","Grocery Stores, Supermarkets",Grocery Stores,"Grocery Stores, Supermarkets",No1.6041-3(c)
+2024-05-18,DEBIT,5.39,EUR,CARD,5411.0,"Grocery Stores, Supermarkets","Grocery Stores, Supermarkets",Grocery Stores,"Grocery Stores, Supermarkets",No1.6041-3(c)
+2024-05-18,DEBIT,85.28,EUR,CARD,5411.0,"Grocery Stores, Supermarkets","Grocery Stores, Supermarkets",Grocery Stores,"Grocery Stores, Supermarkets",No1.6041-3(c)
+2024-05-18,DEBIT,22.26,EUR,CARD,5411.0,"Grocery Stores, Supermarkets","Grocery Stores, Supermarkets",Grocery Stores,"Grocery Stores, Supermarkets",No1.6041-3(c)
+2024-05-23,CREDIT,69.72,EUR,EARNINGS,,,,,,
+2024-05-23,DEBIT,19.18,EUR,CARD,5411.0,"Grocery Stores, Supermarkets","Grocery Stores, Supermarkets",Grocery Stores,"Grocery Stores, Supermarkets",No1.6041-3(c)
+2024-05-23,DEBIT,15.02,EUR,CARD,5411.0,"Grocery Stores, Supermarkets","Grocery Stores, Supermarkets",Grocery Stores,"Grocery Stores, Supermarkets",No1.6041-3(c)
+2024-05-24,DEBIT,7.44,EUR,CARD,5411.0,"Grocery Stores, Supermarkets","Grocery Stores, Supermarkets",Grocery Stores,"Grocery Stores, Supermarkets",No1.6041-3(c)
+2024-05-24,DEBIT,35.76,EUR,CARD,5411.0,"Grocery Stores, Supermarkets","Grocery Stores, Supermarkets",Grocery Stores,"Grocery Stores, Supermarkets",No1.6041-3(c)
+2024-05-25,DEBIT,23.62,EUR,CARD,5411.0,"Grocery Stores, Supermarkets","Grocery Stores, Supermarkets",Grocery Stores,"Grocery Stores, Supermarkets",No1.6041-3(c)
+2024-05-25,DEBIT,16.92,EUR,CARD,5411.0,"Grocery Stores, Supermarkets","Grocery Stores, Supermarkets",Grocery Stores,"Grocery Stores, Supermarkets",No1.6041-3(c)
+2024-05-28,DEBIT,21.76,EUR,CARD,5411.0,"Grocery Stores, Supermarkets","Grocery Stores, Supermarkets",Grocery Stores,"Grocery Stores, Supermarkets",No1.6041-3(c)
+2024-05-28,DEBIT,10.08,EUR,CARD,5912.0,Drug Stores and Pharmacies,Drug Stores and Pharmacies,Drug Stores and Pharmacies,Drug Stores and Pharmacies,No1.6041-3(c)
+2024-05-31,DEBIT,18.97,EUR,CARD,5411.0,"Grocery Stores, Supermarkets","Grocery Stores, Supermarkets",Grocery Stores,"Grocery Stores, Supermarkets",No1.6041-3(c)
+2024-05-31,DEBIT,228.2,EUR,CARD,5311.0,Department Stores,Department Stores,Department Stores,Department Stores,No1.6041-3(c)
+2024-06-01,CREDIT,1.36,EUR,INTEREST,,,,,,
+2024-06-01,DEBIT,43.52,EUR,CARD,5541.0,Service Stations ( with or without ancillary services),Service Stations ( with or without ancillary services),Service Stations ( with or without ancillary services),Service Stations ,No1.6041-3(c)
+2024-06-01,DEBIT,46.22,EUR,CARD,5411.0,"Grocery Stores, Supermarkets","Grocery Stores, Supermarkets",Grocery Stores,"Grocery Stores, Supermarkets",No1.6041-3(c)
+2024-06-02,DEBIT,16.89,EUR,CARD,5814.0,Fast Food Restaurants,Fast Food Restaurants,Fast Food Restaurants,Fast Food Restaurants,No1.6041-3(c)
+2024-06-02,DEBIT,29.56,EUR,CARD,5541.0,Service Stations ( with or without ancillary services),Service Stations ( with or without ancillary services),Service Stations ( with or without ancillary services),Service Stations ,No1.6041-3(c)
+2024-06-02,DEBIT,9.88,EUR,CARD,7011.0,"Lodging – Hotels, Motels, Resorts, Central Reservation Services (not elsewhere classified)","Lodging – Hotels, Motels, Resorts, Central Reservation Services (not elsewhere classified)","Lodging – Hotels, Motels, Resorts, Central Reservation Services (not elsewhere classified)","Hotels, Motels, and Resorts",Yes
+2024-06-03,DEBIT,7.49,EUR,CARD,5411.0,"Grocery Stores, Supermarkets","Grocery Stores, Supermarkets",Grocery Stores,"Grocery Stores, Supermarkets",No1.6041-3(c)
+2024-06-03,DEBIT,9.85,EUR,CARD,7011.0,"Lodging – Hotels, Motels, Resorts, Central Reservation Services (not elsewhere classified)","Lodging – Hotels, Motels, Resorts, Central Reservation Services (not elsewhere classified)","Lodging – Hotels, Motels, Resorts, Central Reservation Services (not elsewhere classified)","Hotels, Motels, and Resorts",Yes
+2024-06-04,CREDIT,1.25,EUR,EARNINGS,,,,,,
+2024-06-04,DEBIT,14.96,EUR,CARD,7011.0,"Lodging – Hotels, Motels, Resorts, Central Reservation Services (not elsewhere classified)","Lodging – Hotels, Motels, Resorts, Central Reservation Services (not elsewhere classified)","Lodging – Hotels, Motels, Resorts, Central Reservation Services (not elsewhere classified)","Hotels, Motels, and Resorts",Yes
+2024-06-04,DEBIT,7.45,EUR,CARD,5411.0,"Grocery Stores, Supermarkets","Grocery Stores, Supermarkets",Grocery Stores,"Grocery Stores, Supermarkets",No1.6041-3(c)
+2024-06-04,DEBIT,3.82,EUR,CARD,5541.0,Service Stations ( with or without ancillary services),Service Stations ( with or without ancillary services),Service Stations ( with or without ancillary services),Service Stations ,No1.6041-3(c)
+2024-06-05,DEBIT,8.53,EUR,CARD,5411.0,"Grocery Stores, Supermarkets","Grocery Stores, Supermarkets",Grocery Stores,"Grocery Stores, Supermarkets",No1.6041-3(c)
+2024-06-05,DEBIT,15.34,EUR,CARD,5814.0,Fast Food Restaurants,Fast Food Restaurants,Fast Food Restaurants,Fast Food Restaurants,No1.6041-3(c)
+2024-06-05,DEBIT,4.91,EUR,CARD,7011.0,"Lodging – Hotels, Motels, Resorts, Central Reservation Services (not elsewhere classified)","Lodging – Hotels, Motels, Resorts, Central Reservation Services (not elsewhere classified)","Lodging – Hotels, Motels, Resorts, Central Reservation Services (not elsewhere classified)","Hotels, Motels, and Resorts",Yes
+2024-06-06,DEBIT,11.3,EUR,CARD,5411.0,"Grocery Stores, Supermarkets","Grocery Stores, Supermarkets",Grocery Stores,"Grocery Stores, Supermarkets",No1.6041-3(c)
+2024-06-06,DEBIT,70.16,EUR,CARD,5541.0,Service Stations ( with or without ancillary services),Service Stations ( with or without ancillary services),Service Stations ( with or without ancillary services),Service Stations ,No1.6041-3(c)
+2024-06-06,DEBIT,5.12,EUR,CARD,5411.0,"Grocery Stores, Supermarkets","Grocery Stores, Supermarkets",Grocery Stores,"Grocery Stores, Supermarkets",No1.6041-3(c)
+2024-06-06,DEBIT,7.67,EUR,CARD,5411.0,"Grocery Stores, Supermarkets","Grocery Stores, Supermarkets",Grocery Stores,"Grocery Stores, Supermarkets",No1.6041-3(c)
+2024-06-06,DEBIT,20.57,EUR,CARD,5541.0,Service Stations ( with or without ancillary services),Service Stations ( with or without ancillary services),Service Stations ( with or without ancillary services),Service Stations ,No1.6041-3(c)
+2024-06-07,DEBIT,44.12,EUR,CARD,7542.0,Car Washes,Car Washes,Car Washes,Car Washes,Yes
+2024-06-07,DEBIT,6.15,EUR,CARD,5411.0,"Grocery Stores, Supermarkets","Grocery Stores, Supermarkets",Grocery Stores,"Grocery Stores, Supermarkets",No1.6041-3(c)
+2024-06-08,DEBIT,5.77,EUR,CARD,5411.0,"Grocery Stores, Supermarkets","Grocery Stores, Supermarkets",Grocery Stores,"Grocery Stores, Supermarkets",No1.6041-3(c)
+2024-06-08,DEBIT,3.78,EUR,CARD,5912.0,Drug Stores and Pharmacies,Drug Stores and Pharmacies,Drug Stores and Pharmacies,Drug Stores and Pharmacies,No1.6041-3(c)
+2024-06-08,DEBIT,15.44,EUR,CARD,5411.0,"Grocery Stores, Supermarkets","Grocery Stores, Supermarkets",Grocery Stores,"Grocery Stores, Supermarkets",No1.6041-3(c)
+2024-06-08,DEBIT,68.21,EUR,CARD,5541.0,Service Stations ( with or without ancillary services),Service Stations ( with or without ancillary services),Service Stations ( with or without ancillary services),Service Stations ,No1.6041-3(c)
+2024-06-08,DEBIT,25.02,EUR,CARD,5411.0,"Grocery Stores, Supermarkets","Grocery Stores, Supermarkets",Grocery Stores,"Grocery Stores, Supermarkets",No1.6041-3(c)
+2024-06-10,CREDIT,1824.48,EUR,PAYIN,,,,,,
+2024-06-11,DEBIT,24.26,EUR,CARD,5411.0,"Grocery Stores, Supermarkets","Grocery Stores, Supermarkets",Grocery Stores,"Grocery Stores, Supermarkets",No1.6041-3(c)
+2024-06-13,CREDIT,7.89,EUR,EARNINGS,,,,,,
+2024-06-14,DEBIT,1245.97,EUR,TRADING,,,,,,
+2024-06-14,DEBIT,13.63,EUR,CARD,5411.0,"Grocery Stores, Supermarkets","Grocery Stores, Supermarkets",Grocery Stores,"Grocery Stores, Supermarkets",No1.6041-3(c)
+2024-06-14,DEBIT,9.69,EUR,CARD,5411.0,"Grocery Stores, Supermarkets","Grocery Stores, Supermarkets",Grocery Stores,"Grocery Stores, Supermarkets",No1.6041-3(c)
+2024-06-15,DEBIT,42.56,EUR,CARD,5411.0,"Grocery Stores, Supermarkets","Grocery Stores, Supermarkets",Grocery Stores,"Grocery Stores, Supermarkets",No1.6041-3(c)
+2024-06-15,DEBIT,28.11,EUR,CARD,5411.0,"Grocery Stores, Supermarkets","Grocery Stores, Supermarkets",Grocery Stores,"Grocery Stores, Supermarkets",No1.6041-3(c)
+2024-06-18,DEBIT,4.24,EUR,CARD,5411.0,"Grocery Stores, Supermarkets","Grocery Stores, Supermarkets",Grocery Stores,"Grocery Stores, Supermarkets",No1.6041-3(c)
+2024-06-18,DEBIT,13.51,EUR,CARD,5411.0,"Grocery Stores, Supermarkets","Grocery Stores, Supermarkets",Grocery Stores,"Grocery Stores, Supermarkets",No1.6041-3(c)
+2024-06-20,DEBIT,18.17,EUR,CARD,5411.0,"Grocery Stores, Supermarkets","Grocery Stores, Supermarkets",Grocery Stores,"Grocery Stores, Supermarkets",No1.6041-3(c)
+2024-06-21,DEBIT,8.3,EUR,CARD,5541.0,Service Stations ( with or without ancillary services),Service Stations ( with or without ancillary services),Service Stations ( with or without ancillary services),Service Stations ,No1.6041-3(c)
+2024-06-22,DEBIT,17.87,EUR,CARD,5411.0,"Grocery Stores, Supermarkets","Grocery Stores, Supermarkets",Grocery Stores,"Grocery Stores, Supermarkets",No1.6041-3(c)
+2024-06-22,DEBIT,29.48,EUR,CARD,5411.0,"Grocery Stores, Supermarkets","Grocery Stores, Supermarkets",Grocery Stores,"Grocery Stores, Supermarkets",No1.6041-3(c)
+2024-06-22,DEBIT,12.83,EUR,CARD,5651.0,Family Clothing Stores,Family Clothing Stores,Family Clothing Stores,Family Clothing Stores,No1.6041-3(c)
+2024-06-22,DEBIT,35.99,EUR,CARD,5411.0,"Grocery Stores, Supermarkets","Grocery Stores, Supermarkets",Grocery Stores,"Grocery Stores, Supermarkets",No1.6041-3(c)
+2024-06-24,DEBIT,7.26,EUR,CARD,5912.0,Drug Stores and Pharmacies,Drug Stores and Pharmacies,Drug Stores and Pharmacies,Drug Stores and Pharmacies,No1.6041-3(c)
+2024-06-24,DEBIT,19.81,EUR,CARD,5411.0,"Grocery Stores, Supermarkets","Grocery Stores, Supermarkets",Grocery Stores,"Grocery Stores, Supermarkets",No1.6041-3(c)
+2024-06-24,DEBIT,3.43,EUR,CARD,5411.0,"Grocery Stores, Supermarkets","Grocery Stores, Supermarkets",Grocery Stores,"Grocery Stores, Supermarkets",No1.6041-3(c)
+2024-06-25,CREDIT,991.8,EUR,PAYIN,,,,,,
+2024-06-26,DEBIT,20.72,EUR,CARD,5411.0,"Grocery Stores, Supermarkets","Grocery Stores, Supermarkets",Grocery Stores,"Grocery Stores, Supermarkets",No1.6041-3(c)
+2024-06-28,CREDIT,0.35,EUR,EARNINGS,,,,,,
+2024-06-28,DEBIT,23.82,EUR,CARD,5411.0,"Grocery Stores, Supermarkets","Grocery Stores, Supermarkets",Grocery Stores,"Grocery Stores, Supermarkets",No1.6041-3(c)
+2024-06-28,DEBIT,37.07,EUR,CARD,5411.0,"Grocery Stores, Supermarkets","Grocery Stores, Supermarkets",Grocery Stores,"Grocery Stores, Supermarkets",No1.6041-3(c)
+2024-06-29,DEBIT,9.03,EUR,CARD,5411.0,"Grocery Stores, Supermarkets","Grocery Stores, Supermarkets",Grocery Stores,"Grocery Stores, Supermarkets",No1.6041-3(c)
+2024-06-30,DEBIT,9.9,EUR,CARD,8398.0,Charitable and Social Service Organizations,Charitable and Social Service Organizations,Charitable and Social Service Organizations,Charitable and Social Service Organizations - Fundraising,No1.6041-3(p)(2)
