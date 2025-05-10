@@ -16,7 +16,7 @@ git clone ... trade-republic-mcp
 cd trade-republic-mcp
 ```
 
-2. Download missing files:
+2. Download missing files, create simplified dbs:
 ```bash
 curl -L "https://github.com/Wenzhi-Ding/Std_Security_Code/raw/refs/heads/main/isin/company_name.pq?download=" > ./data/company_name.pq
 ```
