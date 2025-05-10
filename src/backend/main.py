@@ -17,6 +17,7 @@ async def chat(message: str):
 
 
 @app.get("/health")
+@app.options("/health")
 async def health():
     return {"status": "ok"}
 
