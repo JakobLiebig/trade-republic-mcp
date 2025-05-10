@@ -9,6 +9,9 @@ import json
 _banking_df = None  
 _trading_df = None
 
+# Adding Default User ID to Functions
+DEFAULT_USER_ID = "00909ba7-ad01-42f1-9074-2773c7d3cf2c"
+
 
 def load_banking_data() -> pd.DataFrame:
     """
@@ -80,7 +83,7 @@ def get_all_trading_data() -> str:
 
 @mcp.tool()
 def get_banking_data(
-    user_id: Optional[str] = None,
+    user_id: Optional[str] = DEFAULT_USER_ID,
     start_date: Optional[str] = None,
     end_date: Optional[str] = None,
     side: Optional[str] = None,
@@ -152,7 +155,7 @@ def get_banking_data(
 
 @mcp.tool()
 def get_trading_data(
-    user_id: Optional[str] = None,
+    user_id: Optional[str] = DEFAULT_USER_ID,
     start_datetime: Optional[str] = None,
     end_datetime: Optional[str] = None,
     isin: Optional[Union[str, List[str]]] = None,
@@ -244,7 +247,7 @@ def get_trading_data(
 
 @mcp.resource("user://{user_id}/activity")
 def get_user_activity(
-    user_id: str,
+    user_id: str = DEFAULT_USER_ID,
     start_date: Optional[str] = None,
     end_date: Optional[str] = None
 ) -> str:
@@ -252,7 +255,7 @@ def get_user_activity(
     Get combined banking and trading activity for a specific user.
     
     Args:
-        user_id: User ID to query
+        user_id: User ID to query (default: "00909ba7-ad01-42f1-9074-2773c7d3cf2c")
         start_date: Filter transactions on or after this date
         end_date: Filter transactions on or before this date
     """
@@ -288,7 +291,7 @@ def get_user_activity(
 
 @mcp.resource("user://{user_id}/balance")
 def calculate_account_balance(
-    user_id: str,
+    user_id: str = DEFAULT_USER_ID,
     start_date: Optional[str] = None,
     end_date: Optional[str] = None
 ) -> str:
@@ -339,7 +342,7 @@ def calculate_account_balance(
 
 @mcp.tool()
 def get_largest_transactions(
-    user_id: Optional[str] = None,
+    user_id: Optional[str] = DEFAULT_USER_ID,
     transaction_type: Optional[str] = None,
     start_date: Optional[str] = None,
     end_date: Optional[str] = None,
@@ -377,7 +380,7 @@ def get_largest_transactions(
 
 @mcp.tool()
 def summarize_trading_by_isin(
-    user_id: Optional[str] = None,
+    user_id: Optional[str] = DEFAULT_USER_ID,
     start_date: Optional[str] = None,
     end_date: Optional[str] = None
 ) -> Dict:
@@ -442,7 +445,7 @@ def summarize_trading_by_isin(
 
 @mcp.tool()
 def group_transactions_by_type(
-    user_id: Optional[str] = None,
+    user_id: Optional[str] = DEFAULT_USER_ID,
     start_date: Optional[str] = None,
     end_date: Optional[str] = None
 ) -> Dict:
@@ -496,7 +499,7 @@ def group_transactions_by_type(
 
 @mcp.tool()
 def get_monthly_summary(
-    user_id: Optional[str] = None,
+    user_id: Optional[str] = DEFAULT_USER_ID,
     start_date: Optional[str] = None,
     end_date: Optional[str] = None
 ) -> Dict:
