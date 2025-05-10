@@ -20,7 +20,7 @@ provider = OpenAIProvider(
     api_key=api_key
 )
 model = OpenAIModel(
-    model_name="gpt-4o-mini",
+    model_name="gpt-4.1-mini",
     provider=provider,
 )
 agent = Agent(
