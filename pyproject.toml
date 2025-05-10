@@ -11,6 +11,9 @@ dependencies = [
     "pytr>=0.4.2",
     "websocket-client>=1.8.0",
     "pandas>=2.2.0",
+    "pyarrow>=20.0.0",
+    "fuzzywuzzy>=0.18.0",
+    "python-levenshtein>=0.27.1",
 ]
 
 [tool.uv]

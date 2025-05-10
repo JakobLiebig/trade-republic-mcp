@@ -13,8 +13,10 @@ from src.trade_republic.features.query_data import (
     group_transactions_by_type,
     get_monthly_summary
 )
-
-import src.trade_republic.features.test
+from src.trade_republic.features.lookups import (
+    isin_by_company_name,
+    company_name_by_isin
+)
 
 if __name__ == "__main__":
     mcp.run(transport="sse")
