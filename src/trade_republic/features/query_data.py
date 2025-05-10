@@ -2,7 +2,7 @@ from src.trade_republic.core.server import mcp
 import os
 import pandas as pd
 from datetime import datetime, date, timezone
-from typing import Optional, List, Dict, Union, Tuple
+from typing import Optional, List, Dict, Union
 import json
 
 from src.trade_republic.features import ws_api
@@ -318,7 +318,13 @@ def calculate_account_balance(
 
 @mcp.tool()
 async def get_current_price(isin: str):
-    print("USING GET CURRENT PRICE")
+    """
+Get the current price for a stock by its ISIN.
+If you dont know the ISIN, you can use the search tool to find it.
+
+Args:
+    isin: ISIN of the stock
+    """
     await ws.connect()
     response = await ws.fetch(isin, "instrument")
     response = await ws.fetch(
@@ -336,7 +342,6 @@ async def get_historic_prices(isin: str, range: str, resolution: int = 86400000)
         isin: ISIN of the stock
         range: range of the data (e.g. 5y or 3m)
     """
-    print("USING GET HISTORIC PRICES")
     await ws.connect()
     response = await ws.fetch(isin, "instrument")
     response = await ws.subscribe(

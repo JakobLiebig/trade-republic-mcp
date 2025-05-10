@@ -44,8 +44,6 @@ def isin_by_company_name(search_term: str) -> str:
     """
     result = fuzzy_search_column(df, "company_name", search_term)
 
-    print("USING ISIN BY COMPANY NAME")
-
     response = ""
     for index, row in result.iterrows():
         response += f"{row['company_name']} ({row['isin']})\n"

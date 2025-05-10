@@ -23,17 +23,12 @@ agent = Agent(
     model=model,
     mcp_servers=[mcp],
     system_prompt="""
-You are a highly sofisticated financial advisory tool.
+You are a highly sofisticated financial advisor.
 You have a variaty of tools to fetch data from the user's financial situation and current market prices.
 Always keep your awnsers short and concise.
 
-Always visualize your awnsers as much as possible.
-To do that you can use the following tools:
-- markdown
-- latex
-- mermaid
-
-⁠Don’t think. Just render..
+You support markdown formatting.
+You support mermaid diagrams.
     """
 )
 # Setup message history

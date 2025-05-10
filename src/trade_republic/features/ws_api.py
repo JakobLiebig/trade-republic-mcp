@@ -35,6 +35,7 @@ class WsApiConnection:
         if self.verbose:
             print("> " + message)
 
+        print(message)
         await self.ws.send(message)
         response = await self.ws.recv()
 
