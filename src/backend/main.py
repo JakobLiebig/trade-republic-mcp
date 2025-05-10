@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from fastapi.responses import StreamingResponse
+from fastapi.middleware.cors import CORSMiddleware
 
 from src.backend.ai import stream_response
 
@@ -8,12 +9,22 @@ app = FastAPI(
     description="Backend for the Trade Republic project",
 )
 
+# Add CORS middleware
+app.add_middleware(
+    CORSMiddleware,
+    # Allow requests from your frontend origin
+    allow_origins=["*"],
+    # Alternatively, allow all origins with:
+    # allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],  # Allows all methods
+    allow_headers=["*"],  # Allows all headers
+)
+
+
 @app.post("/chat")
 async def chat(message: str):
-    return StreamingResponse(
-        stream_response(message),
-        media_type="text/event-stream"
-    )
+    return StreamingResponse(stream_response(message), media_type="text/event-stream")
 
 
 @app.get("/health")
@@ -24,8 +35,5 @@ async def health():
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(
-        app,
-        host="0.0.0.0",
-        port=8000
-    )
+
+    uvicorn.run(app, host="localhost", port=8000)
