@@ -1,24 +1,56 @@
 # Trade Republic MCP
+
 A Model Context Protocol Server for Trade Republic.
 
-Setup
-```
+## Prerequisites
+
+- Python 3.13 or higher
+- Git
+- UV package manager
+
+## Installation
+
+1. Clone the repository:
+```bash
 git clone ... trade-republic-mcp
 cd trade-republic-mcp
+```
+
+2. Install dependencies:
+```bash
 uv sync
 ```
 
-Create .env and add these variables:
-```
-OPENAI_API_KEY
-```
-
-Run the server
-```
-python3 src/trade-republic/server.py
+3. Create a `.env` file in the project root and add your OpenAI API key:
+```bash
+OPENAI_API_KEY=your_api_key_here
 ```
 
-Run the client
+## Usage
+
+### Running the MCP Server
+
+Start the Model Context Protocol server:
+```bash
+uv run -m src.trade_republic.main
 ```
-python3 src/client.py
+
+### Running the Backend Server
+
+Start the backend server:
+```bash
+uv run -m src.backend.main
 ```
+
+### Running the Test Client
+
+Run the test client:
+```bash
+uv run -m src.client
+```
+
+## Project Structure
+
+- `src/trade_republic/` - MCP server implementation
+- `src/backend/` - Backend server implementation
+- `src/client.py` - Test client implementation
