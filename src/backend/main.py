@@ -8,12 +8,18 @@ app = FastAPI(
     description="Backend for the Trade Republic project",
 )
 
-@app.get("/chat")
+@app.post("/chat")
 async def chat(message: str):
     return StreamingResponse(
         stream_response(message),
         media_type="text/event-stream"
     )
+
+
+@app.get("/health")
+async def health():
+    return {"status": "ok"}
+
 
 if __name__ == "__main__":
     import uvicorn
