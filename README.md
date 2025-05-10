@@ -16,12 +16,18 @@ git clone ... trade-republic-mcp
 cd trade-republic-mcp
 ```
 
-2. Install dependencies:
+2. Download missing files:
+```bash
+curl -L "https://github.com/Wenzhi-Ding/Std_Security_Code/raw/refs/heads/main/isin/company_name.pq?download=" > ./data/company_name.pq
+```
+
+
+3. Install dependencies:
 ```bash
 uv sync
 ```
 
-3. Create a `.env` file in the project root and add your OpenAI API key:
+4. Create a `.env` file in the project root and add your OpenAI API key:
 ```bash
 OPENAI_API_KEY=your_api_key_here
 ```
