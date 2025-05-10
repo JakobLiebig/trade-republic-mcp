@@ -21,10 +21,13 @@ app.add_middleware(
     allow_headers=["*"],  # Allows all headers
 )
 
+async def stream_wrapper(message: str):
+    async for chunk in stream_response(message):
+        yield f"event: message\ndata: {chunk}\n\n"
 
 @app.post("/chat")
 async def chat(message: str):
-    return StreamingResponse(stream_response(message), media_type="text/event-stream")
+    return StreamingResponse(stream_wrapper(message), media_type="text/event-stream")
 
 
 @app.get("/health")
