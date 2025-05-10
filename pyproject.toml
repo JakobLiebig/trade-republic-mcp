@@ -7,5 +7,6 @@ requires-python = ">=3.13"
 dependencies = [
     "fastapi>=0.115.12",
     "fastmcp>=2.3.1",
+    "pandas>=2.2.3",
     "pydantic-ai[mcp]>=0.1.10",
 ]
