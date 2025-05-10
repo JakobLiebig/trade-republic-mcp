@@ -4,20 +4,16 @@ from pydantic_ai.models.openai import OpenAIModel
 from pydantic_ai.mcp import MCPServerHTTP
 from pydantic_ai import Agent
 
-import os
-from dotenv import load_dotenv
-
-load_dotenv()
-api_key = os.getenv("OPENAI_API_KEY")
+from src.config import secrets
 
 # Setup MCP Connection
 mcp = MCPServerHTTP(
-    url="http://localhost:8080/sse",
+    url=f"http://localhost:8080/sse",
     sse_read_timeout=30,
 )
 # Setup model
 provider = OpenAIProvider(
-    api_key=api_key
+    api_key=secrets.openai_api_key
 )
 model = OpenAIModel(
     model_name="gpt-4.1-mini",

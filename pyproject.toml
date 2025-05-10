@@ -9,4 +9,6 @@ dependencies = [
     "fastmcp>=2.3.1",
     "pandas>=2.2.3",
     "pydantic-ai[mcp]>=0.1.10",
+    "pytr>=0.4.2",
+    "websocket-client>=1.8.0",
 ]
