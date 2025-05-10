@@ -1,5 +1,6 @@
 from src.trade_republic.core.server import mcp
 from src.trade_republic.features.query_data import (
+    get_current_price,
     load_banking_data,
     load_trading_data,
     get_all_banking_data,
@@ -11,12 +12,13 @@ from src.trade_republic.features.query_data import (
     get_largest_transactions,
     summarize_trading_by_isin,
     group_transactions_by_type,
-    get_monthly_summary
+    get_monthly_summary,
 )
 from src.trade_republic.features.lookups import (
     isin_by_company_name,
-    company_name_by_isin
+    company_name_by_isin,
 )
 
 if __name__ == "__main__":
     mcp.run(transport="sse")
+

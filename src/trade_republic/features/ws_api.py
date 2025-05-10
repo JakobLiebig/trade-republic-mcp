@@ -1,4 +1,3 @@
-
 import websockets
 import asyncio
 
@@ -10,15 +9,16 @@ import json
 
 # ISIN and MCID lookups
 
+
 class WsApiConnection:
     def __init__(self, verbose: bool = False):
         self.ws = None
         self.sub_id = 0
         self.verbose = verbose
-    
+
     async def connect(self):
         self.ws = await websockets.connect("wss://api.traderepublic.com")
-        await self.ws.send('connect 30')
+        await self.ws.send("connect 30")
 
         if self.verbose:
             print("> connect 30")
@@ -29,10 +29,9 @@ class WsApiConnection:
 
         if msg != "connected":
             raise Exception("Failed to connect to the API")
-        
 
     async def subscribe(self, payload: dict):
-        message = 'sub ' + str(self.sub_id) + ' ' + json.dumps(payload)
+        message = "sub " + str(self.sub_id) + " " + json.dumps(payload)
         if self.verbose:
             print("> " + message)
 
@@ -42,24 +41,20 @@ class WsApiConnection:
         if self.verbose:
             print("< " + response)
 
-        code = response.split(' ')[1]
+        code = response.split(" ")[1]
         if code == "E":
             raise ValueError(f"Failed to subscribe to {payload}: {response}")
 
-        response = response.removeprefix(f'{self.sub_id} A ')
+        response = response.removeprefix(f"{self.sub_id} A ")
 
         self.sub_id += 1
         return json.loads(response)
-    
+
     async def fetch(self, instrument_id: str, type: str) -> dict:
         return await self.subscribe({"type": type, "id": instrument_id})
 
     async def search(
-        self,
-        query: str,
-        asset_type: str = "stock",
-        page: int = 1,
-        page_size: int = 10
+        self, query: str, asset_type: str = "stock", page: int = 1, page_size: int = 10
     ) -> dict:
         search_parameters = {
             "q": query,
@@ -67,12 +62,6 @@ class WsApiConnection:
             "page": page,
             "pageSize": page_size,
         }
-        return await self.subscribe({"type": "neonSearchTags", "data": search_parameters})
-
-
-async def main():
-    ws = WsApiConnection(verbose=True)
-    await ws.connect()
-    print(await ws.search("Apple"))
-
-asyncio.run(main())
+        return await self.subscribe(
+            {"type": "neonSearchTags", "data": search_parameters}
+        )
