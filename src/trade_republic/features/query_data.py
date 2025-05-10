@@ -1,7 +1,7 @@
 from src.trade_republic.core.server import mcp
 import os
 import pandas as pd
-from datetime import datetime, date
+from datetime import datetime, date, timezone
 from typing import Optional, List, Dict, Union, Tuple
 import json
 
@@ -325,6 +325,38 @@ async def get_current_price(isin: str):
         "{}.{}".format(isin, response["exchangeIds"][0]), "ticker"
     )
     return response["last"]["price"]
+
+
+@mcp.tool()
+async def get_historic_prices(isin: str, range: str, resolution: int = 86400000):
+    """
+    Get the price history for the stock
+
+    Args:
+        isin: ISIN of the stock
+        range: range of the data (e.g. 5y or 3m)
+    """
+    print("USING GET HISTORIC PRICES")
+    await ws.connect()
+    response = await ws.fetch(isin, "instrument")
+    response = await ws.subscribe(
+        {
+            "id": "{}.{}".format(isin, response["exchangeIds"][0]),
+            "type": "aggregateHistoryLight",
+            "range": range,
+            "resolution": resolution,
+        }
+    )
+
+    prices = response["aggregates"]
+
+    price_dict = {}
+    for price in prices:
+        price_dict[datetime.fromtimestamp(price["time"] / 1000.0, tz=timezone.utc)] = (
+            price["close"]
+        )
+
+    return price_dict
 
 
 @mcp.tool()
