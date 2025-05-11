@@ -4,11 +4,11 @@ from pydantic_ai.models.mistral import MistralModel
 from pydantic_ai.mcp import MCPServerHTTP
 from pydantic_ai import Agent
 
-from backend.config import secrets
+from backend.config import config, secrets
 
 # Setup MCP Connection
 mcp = MCPServerHTTP(
-    url=f"http://localhost:8080/sse",
+    url=f"http://{config.mcp_host}:{config.mcp_port}/sse",
     sse_read_timeout=30,
 )
 # Setup model

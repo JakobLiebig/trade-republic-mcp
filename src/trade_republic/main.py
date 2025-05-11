@@ -18,7 +18,12 @@ from features.lookups import (
     isin_by_company_name,
     company_name_by_isin,
 )
+from config import config
 
 if __name__ == "__main__":
-    mcp.run(transport="sse")
+    mcp.run(
+        transport="sse",
+        host=config.mcp_host,
+        port=config.mcp_port,
+    )
 
