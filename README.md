@@ -32,6 +32,11 @@ uv sync
 OPENAI_API_KEY=your_api_key_here
 ```
 
+5. (Optional) Install MCP locally
+```bash
+fastmcp install src/trade_republic/local.py
+```
+
 ## Usage
 
 ### Running the MCP Server

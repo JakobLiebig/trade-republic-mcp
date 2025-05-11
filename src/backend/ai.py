@@ -1,10 +1,9 @@
-import asyncio
 from pydantic_ai.providers.openai import OpenAIProvider
 from pydantic_ai.models.openai import OpenAIModel
 from pydantic_ai.mcp import MCPServerHTTP
 from pydantic_ai import Agent
 
-from src.config import secrets
+from config import secrets
 
 # Setup MCP Connection
 mcp = MCPServerHTTP(

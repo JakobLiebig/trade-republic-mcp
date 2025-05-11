@@ -1,11 +1,11 @@
-from src.trade_republic.core.server import mcp
+from server import mcp
 import os
 import pandas as pd
-from datetime import datetime, date, timezone
+from datetime import datetime, timezone
 from typing import Optional, List, Dict, Union
 import json
 
-from src.trade_republic.features import ws_api
+from features import ws_api
 
 # Data loading and caching
 _banking_df = None
@@ -327,9 +327,11 @@ Args:
     """
     await ws.connect()
     response = await ws.fetch(isin, "instrument")
-    response = await ws.fetch(
-        "{}.{}".format(isin, response["exchangeIds"][0]), "ticker"
-    )
+
+    if len(response["exchangeIds"]) == 0:
+        raise ValueError(f"No exchange IDs found for ISIN {isin}")
+
+    response = await ws.fetch(f"{isin}.{response['exchangeIds'][0]}", "ticker")
     return response["last"]["price"]
 
 
@@ -346,7 +348,7 @@ async def get_historic_prices(isin: str, range: str, resolution: int = 86400000)
     response = await ws.fetch(isin, "instrument")
     response = await ws.subscribe(
         {
-            "id": "{}.{}".format(isin, response["exchangeIds"][0]),
+            "id": f"{isin}.{response['exchangeIds'][0]}",
             "type": "aggregateHistoryLight",
             "range": range,
             "resolution": resolution,

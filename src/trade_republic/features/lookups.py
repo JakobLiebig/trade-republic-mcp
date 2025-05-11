@@ -2,7 +2,7 @@ import pandas as pd
 from fuzzywuzzy import fuzz
 import Levenshtein
 
-from src.trade_republic.core.server import mcp
+from server import mcp
 
 df = pd.read_parquet("data/company_name.pq")
 

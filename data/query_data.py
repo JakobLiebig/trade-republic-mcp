@@ -418,7 +418,7 @@ def summarize_trading_by_isin(
         return pd.DataFrame()
     
     # Group by ISIN and calculate summary statistics
-    summary = trading_data.groupby('ISIN').agg({
+    summary = trading_data.groupby('isin').agg({
         'executionSize': 'sum',
         'totalAmount': 'sum',
         'executedAt': ['count', 'min', 'max'],
@@ -430,8 +430,8 @@ def summarize_trading_by_isin(
     summary['sell_count'] = summary['trade_count'] - summary['buy_count']
     
     # Add net position
-    buy_positions = trading_data[trading_data['direction'] == 'BUY'].groupby('ISIN')['executionSize'].sum()
-    sell_positions = trading_data[trading_data['direction'] == 'SELL'].groupby('ISIN')['executionSize'].sum()
+    buy_positions = trading_data[trading_data['direction'] == 'BUY'].groupby('isin')['executionSize'].sum()
+    sell_positions = trading_data[trading_data['direction'] == 'SELL'].groupby('isin')['executionSize'].sum()
     
     # Fill NaN values with 0 for ISINs that don't have both buys and sells
     buy_positions = buy_positions.fillna(0)

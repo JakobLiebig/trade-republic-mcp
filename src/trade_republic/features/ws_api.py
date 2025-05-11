@@ -1,13 +1,6 @@
 import websockets
-import asyncio
 
 import json
-
-# from src.trade_republic.core.server import mcp
-
-# from src.config import secrets
-
-# ISIN and MCID lookups
 
 
 class WsApiConnection:
@@ -35,7 +28,6 @@ class WsApiConnection:
         if self.verbose:
             print("> " + message)
 
-        print(message)
         await self.ws.send(message)
         response = await self.ws.recv()
 
@@ -53,16 +45,3 @@ class WsApiConnection:
 
     async def fetch(self, instrument_id: str, type: str) -> dict:
         return await self.subscribe({"type": type, "id": instrument_id})
-
-    async def search(
-        self, query: str, asset_type: str = "stock", page: int = 1, page_size: int = 10
-    ) -> dict:
-        search_parameters = {
-            "q": query,
-            "filter": [{"key": "type", "value": asset_type}],
-            "page": page,
-            "pageSize": page_size,
-        }
-        return await self.subscribe(
-            {"type": "neonSearchTags", "data": search_parameters}
-        )

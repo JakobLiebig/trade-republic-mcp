@@ -1,5 +1,5 @@
-from src.trade_republic.core.server import mcp
-from src.trade_republic.features.query_data import (
+from server import mcp
+from features.query_data import (
     get_current_price,
     load_banking_data,
     load_trading_data,
@@ -14,7 +14,7 @@ from src.trade_republic.features.query_data import (
     group_transactions_by_type,
     get_monthly_summary,
 )
-from src.trade_republic.features.lookups import (
+from features.lookups import (
     isin_by_company_name,
     company_name_by_isin,
 )
