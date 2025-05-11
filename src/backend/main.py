@@ -3,7 +3,7 @@ from fastapi.responses import StreamingResponse
 from fastapi.middleware.cors import CORSMiddleware
 
 from ai import stream_response
-
+from config import config
 app = FastAPI(
     title="Trade Republic Backend",
     description="Backend for the Trade Republic project",
@@ -38,5 +38,10 @@ async def health():
 
 if __name__ == "__main__":
     import uvicorn
+    from config import config
 
-    uvicorn.run(app, host="localhost", port=8000)
+    uvicorn.run(
+        app,
+        host=config.backend_host,
+        port=config.backend_port,
+    )
