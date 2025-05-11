@@ -4,7 +4,7 @@ from pydantic_ai.models.mistral import MistralModel
 from pydantic_ai.mcp import MCPServerHTTP
 from pydantic_ai import Agent
 
-from config import secrets, config
+from src.backend.config import secrets, config
 
 # Setup MCP Connection
 mcp = MCPServerHTTP(
