@@ -1,5 +1,6 @@
-from pydantic_ai.providers.openai import OpenAIProvider
-from pydantic_ai.models.openai import OpenAIModel
+import asyncio
+from pydantic_ai.providers.mistral import MistralProvider
+from pydantic_ai.models.mistral import MistralModel
 from pydantic_ai.mcp import MCPServerHTTP
 from pydantic_ai import Agent
 
@@ -10,11 +11,11 @@ mcp = MCPServerHTTP(
     url="http://localhost:8080/sse",
 )
 # Setup model
-provider = OpenAIProvider(
-    api_key=secrets.openai_api_key
+provider = MistralProvider(
+    api_key=secrets.mistral_api_key
 )
-model = OpenAIModel(
-    model_name="gpt-4o-mini",
+model = MistralModel(
+    model_name="mistral-large-latest",
     provider=provider,
 )
 agent = Agent(
